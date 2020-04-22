@@ -22,7 +22,7 @@ public class MusicBinder extends Binder {
         service.handler.post(r);
     }
 
-    public void isReadyForPost() {
+    public boolean isReadyForPost() {
         return service != null && service.handler != null;
     }
 
