@@ -164,7 +164,7 @@ public class MusicModule extends ReactContextBaseJavaModule implements ServiceCo
 
     @ReactMethod
     public void isServiceRunning(final Promise callback) {
-        callback.resolve(isBinderReady())
+        callback.resolve(isBinderReady());
     }
 
     @ReactMethod
