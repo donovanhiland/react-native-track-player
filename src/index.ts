@@ -19,6 +19,10 @@ async function setupPlayer(options: PlayerOptions = {}): Promise<void> {
   return TrackPlayer.setupPlayer(options || {})
 }
 
+async function isServiceRunning(): Promise<void> {
+  return TrackPlayer.isServiceRunning()
+}
+
 function destroy() {
   return TrackPlayer.destroy()
 }
@@ -192,6 +196,7 @@ export default {
   // MARK: - General API
   setupPlayer,
   destroy,
+  isServiceRunning,
   registerPlaybackService,
   addEventListener,
 
