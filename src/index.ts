@@ -19,7 +19,7 @@ async function setupPlayer(options: PlayerOptions = {}): Promise<void> {
   return TrackPlayer.setupPlayer(options || {})
 }
 
-async function isServiceRunning(): Promise<void> {
+async function isServiceRunning(): Promise<boolean> {
   return TrackPlayer.isServiceRunning()
 }
 
