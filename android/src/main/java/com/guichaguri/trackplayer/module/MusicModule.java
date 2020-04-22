@@ -86,6 +86,10 @@ public class MusicModule extends ReactContextBaseJavaModule implements ServiceCo
         connecting = false;
     }
 
+    private boolean isBinderReady() {
+        return binder != null && binder.isReadyForPost();
+    }
+
     /**
      * Waits for a connection to the service and/or runs the {@link Runnable} in the player thread
      */
@@ -156,6 +160,11 @@ public class MusicModule extends ReactContextBaseJavaModule implements ServiceCo
         final Bundle options = Arguments.toBundle(data);
 
         waitForConnection(() -> binder.setupPlayer(options, promise));
+    }
+
+    @ReactMethod
+    public void isServiceRunning(final Promise callback) {
+        callback.resolve(isBinderReady())
     }
 
     @ReactMethod
