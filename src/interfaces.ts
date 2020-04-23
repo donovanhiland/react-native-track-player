@@ -49,11 +49,7 @@ export interface PlayerOptions {
    * Indicates whether the player should automatically update now playing metadata data in control center / notification.
    * Defaults to `true`.
    */
-<<<<<<< HEAD
-  automaticallyUpdateNowPlayingInfo?: boolean
-=======
   autoUpdateMetadata?: boolean
->>>>>>> dev
 }
 
 export enum RatingType {
