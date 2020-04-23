@@ -31,6 +31,10 @@ async function isServiceRunning(): Promise<boolean> {
   return TrackPlayer.isServiceRunning()
 }
 
+function destroy() {
+  return TrackPlayer.destroy()
+}
+
 type ServiceHandler = () => Promise<void>
 function registerPlaybackService(factory: () => ServiceHandler) {
   if (Platform.OS === 'android') {
