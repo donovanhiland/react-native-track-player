@@ -1,7 +1,15 @@
 import { Platform, AppRegistry, DeviceEventEmitter, NativeEventEmitter, NativeModules } from 'react-native'
 // @ts-ignore
 import * as resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource'
-import { MetadataOptions, PlayerOptions, Event, Track, State, TrackMetadata, NowPlayingMetadata } from './interfaces'
+import {
+  MetadataOptions,
+  PlayerOptions,
+  Event,
+  Track,
+  State,
+  TrackMetadataBase,
+  NowPlayingMetadata,
+} from './interfaces'
 
 const { TrackPlayerModule: TrackPlayer } = NativeModules
 const emitter = Platform.OS !== 'android' ? new NativeEventEmitter(TrackPlayer) : DeviceEventEmitter
@@ -21,10 +29,6 @@ async function setupPlayer(options: PlayerOptions = {}): Promise<void> {
 
 async function isServiceRunning(): Promise<boolean> {
   return TrackPlayer.isServiceRunning()
-}
-
-function destroy() {
-  return TrackPlayer.destroy()
 }
 
 type ServiceHandler = () => Promise<void>
@@ -109,7 +113,7 @@ async function updateOptions(options: MetadataOptions = {}): Promise<void> {
   return TrackPlayer.updateOptions(options)
 }
 
-async function updateMetadataForTrack(trackId: string, metadata: TrackMetadata): Promise<void> {
+async function updateMetadataForTrack(trackId: string, metadata: TrackMetadataBase): Promise<void> {
   return TrackPlayer.updateMetadataForTrack(trackId, metadata)
 }
 

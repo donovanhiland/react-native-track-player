@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import TrackPlayer, {
   State,
   Event,
-  useTrackPlayerProgress,
-  usePlaybackState,
   useTrackPlayerEvents
 } from "react-native-track-player";
 import {
@@ -17,7 +15,7 @@ import {
 } from "react-native";
 
 function ProgressBar() {
-  const progress = useTrackPlayerProgress();
+  const progress = TrackPlayer.useTrackPlayerProgress();
 
   return (
     <View style={styles.progress}>
@@ -46,7 +44,7 @@ ControlButton.propTypes = {
 };
 
 export default function Player(props) {
-  const playbackState = usePlaybackState();
+  const playbackState = TrackPlayer.usePlaybackState();
   const [trackTitle, setTrackTitle] = useState("");
   const [trackArtwork, setTrackArtwork] = useState("");
   const [trackArtist, setTrackArtist] = useState("");
