@@ -15,6 +15,7 @@
 		9B78A2461F3F12BC002B5E3C /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B78A2451F3F12BC002B5E3C /* Track.swift */; };
 		9B78A2481F3F12C9002B5E3C /* MediaURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B78A2471F3F12C9002B5E3C /* MediaURL.swift */; };
 		9BFC1FDD1F61A8E8008795BF /* Capabilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC1FDC1F61A8E8008795BF /* Capabilities.swift */; };
+		BF227390244F344D00A9893D /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B70466422BFFDEE00065A77 /* Metadata.swift */; };
 		E325282D94FF82CFA2EB0010 /* libPods-RNTrackPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1246438900A0B75E980792EE /* libPods-RNTrackPlayer.a */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		9B0E282D1F07D76F00B71D2A /* RNTrackPlayerBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTrackPlayerBridge.m; sourceTree = "<group>"; };
 		9B18C2F9226356560019375A /* SessionCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionCategories.swift; sourceTree = "<group>"; };
 		9B58DF3A1F40C0F000C2105E /* RNTrackPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNTrackPlayer.swift; sourceTree = "<group>"; };
+		9B70466422BFFDEE00065A77 /* Metadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metadata.swift; sourceTree = "<group>"; };
 		9B78A2451F3F12BC002B5E3C /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		9B78A2471F3F12C9002B5E3C /* MediaURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaURL.swift; sourceTree = "<group>"; };
 		9BFBA4D01F3DFA3F00453D3A /* RNTrackPlayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNTrackPlayer-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		9B0E282B1F07D76F00B71D2A /* RNTrackPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				9B70466322BFFDDD00065A77 /* Utils */,
 				9BFBA4D31F3DFA4B00453D3A /* Support */,
 				9B0E287A1F0831A400B71D2A /* Models */,
 				9B0E282C1F07D76F00B71D2A /* RNTrackPlayerBridge.h */,
@@ -108,6 +111,14 @@
 				9B18C2F9226356560019375A /* SessionCategories.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9B70466322BFFDDD00065A77 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9B70466422BFFDEE00065A77 /* Metadata.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		9BFBA4D31F3DFA4B00453D3A /* Support */ = {
@@ -211,6 +222,7 @@
 			files = (
 				9B0E282E1F07D76F00B71D2A /* RNTrackPlayerBridge.m in Sources */,
 				9B18C2FA226356560019375A /* SessionCategories.swift in Sources */,
+				BF227390244F344D00A9893D /* Metadata.swift in Sources */,
 				9B78A2481F3F12C9002B5E3C /* MediaURL.swift in Sources */,
 				9BFC1FDD1F61A8E8008795BF /* Capabilities.swift in Sources */,
 				9B78A2461F3F12BC002B5E3C /* Track.swift in Sources */,
